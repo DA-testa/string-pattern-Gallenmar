@@ -4,21 +4,20 @@ def read_input():
     # this function needs to acquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     
-    input_type = input()
+    input_type = input().rstrip()
     
-    if input_type == 'I\n':
-        pattern = input()
-        text = input()
+    if input_type == 'I':
+        pattern = input().rstrip()
+        text = input().rstrip()
         
-    elif input_type == 'F\n':
-        filename = input()
-        with open(filename.strip()) as f:
-            pattern = f.readline()
-            text = f.readline()
+    elif input_type == 'F':
+        filename = input().rstrip()
+        with open(filename) as f:
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
     
     # return both lines in one return
-    return pattern.rstrip(), text.rstrip()
-
+    return pattern, text
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
