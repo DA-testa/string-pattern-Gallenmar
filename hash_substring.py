@@ -12,7 +12,7 @@ def read_input():
             text = input().rstrip()
             
         elif input_type == 'F':
-            filename = input().rstrip()
+            filename = "06"#input().rstrip()
             with open(filename) as f:
                 pattern = f.readline().rstrip()
                 text = f.readline().rstrip()
