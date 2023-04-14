@@ -17,7 +17,7 @@ def read_input():
                 pattern = f.readline().rstrip()
                 text = f.readline().rstrip()
                 
-        return pattern, text
+        return (pattern, text)
     
     except EOFError:
         return "Error: Input stream ended unexpectedly"
