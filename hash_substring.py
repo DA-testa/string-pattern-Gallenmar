@@ -29,10 +29,11 @@ def read_input():
     elif 'F' in text:
         name = "06"#input()
         if not 'a' in name: 
-            with open(name) as f:
-                name = "tests/"+name
-                pattern = f.readline().rstrip()
-                text = f.readline().rstrip()
+            
+            name = "tests/"+name
+            f=open(name,"r")
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
     return (pattern, text)
 
 
