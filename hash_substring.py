@@ -3,7 +3,7 @@
 def read_input():
     # this function needs to acquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-    
+    '''
     try:
         input_type = input().rstrip()
         
@@ -12,7 +12,7 @@ def read_input():
             text = input().rstrip()
             
         elif input_type == 'F':
-            filename = '06'#input().rstrip()
+            filename = "06"#input().rstrip()
             with open(filename) as f:
                 pattern = f.readline().rstrip()
                 text = f.readline().rstrip()
@@ -21,6 +21,19 @@ def read_input():
     
     except EOFError:
         return "Error: Input stream ended unexpectedly"
+    '''
+    text = input()
+    if 'I' in text:
+        pattern = input().rstrip()
+        text = input().rstrip()
+    elif 'F' in text:
+        name = "06"#input()
+        if not 'a' in name: 
+            with open(name) as f:
+                name = "tests/"+name
+                pattern = f.readline().rstrip()
+                text = f.readline().rstrip()
+    return (pattern, text)
 
 
 def print_occurrences(output):
